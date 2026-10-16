@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pancita Llena — 200 recetas naturales para tu perro</title>
+  <meta name="description" content="200 recetas naturales que le devuelven la salud a tu perro. Ingredientes que ya tienes en casa, paso a paso sencillo y la porción exacta para su tamaño. Acceso inmediato por solo $7.99 USD.">
+  <meta name="theme-color" content="#10B981">
+  <link rel="icon" type="image/webp" href="logo-pancita.webp">
+  <link rel="apple-touch-icon" href="logo-pancita.webp">
+  <link rel="preload" as="image" href="hero-antes-despues.webp" fetchpriority="high">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pancita Llena — 200 recetas naturales para tu perro">
+  <meta property="og:description" content="Comida de verdad, con ingredientes del mercado. Acceso inmediato + 4 bonos por solo $7.99 USD.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=1200&h=630&fit=crop&q=80">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Nunito', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            ink: '#1F2937',
+            soft: '#F9FAFB',
+            health: { DEFAULT: '#10B981', dark: '#059669', light: '#D1FAE5' },
+            cta: { DEFAULT: '#F97316', dark: '#EA580C', light: '#FFEDD5' },
+            sun: '#FBBF24'
+          },
+          boxShadow: {
+            cta: '0 10px 25px -8px rgba(249, 115, 22, 0.65)',
+            card: '0 4px 20px -6px rgba(31, 41, 55, 0.12)'
+          },
+          keyframes: {
+            pulseSoft: { '0%, 100%': { transform: 'scale(1)' }, '50%': { transform: 'scale(1.03)' } }
+          },
+          animation: {
+            pulseSoft: 'pulseSoft 2.2s ease-in-out infinite'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { -webkit-font-smoothing: antialiased; }
+
+    .btn-cta {
+      position: relative;
+      overflow: hidden;
+      min-height: 56px;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    }
+    .btn-cta::after {
+      content: "";
+      position: absolute;
+      top: 0; left: -75%;
+      width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
+      transform: skewX(-20deg);
+      animation: shine 3.2s ease-in-out infinite;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -10px rgba(249,115,22,.75); }
+    .btn-cta:active { transform: translateY(0) scale(.98); }
+    @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
+
+    .faq-panel { max-height: 0; overflow: hidden; transition: max-height .35s ease, opacity .35s ease; opacity: 0; }
+    .faq-item.is-open .faq-panel { opacity: 1; }
+    .faq-item .faq-chevron { transition: transform .3s ease; }
+    .faq-item.is-open .faq-chevron { transform: rotate(180deg); }
+
+    #sticky-cta { transition: transform .3s ease, opacity .3s ease; }
+    #sticky-cta.is-hidden { transform: translateY(110%); opacity: 0; pointer-events: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn-cta::after, .animate-pulseSoft { animation: none !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-ink overflow-x-hidden">
+
+  <!-- Barra superior -->
+  <div class="bg-health-dark text-white text-center text-xs sm:text-sm font-bold py-2 px-4">
+    <span class="inline-flex items-center gap-1.5">
+      <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
+      Oferta especial: de $47.99 por $7.99 USD + 4 bonos de regalo
+    </span>
+  </div>
+
+  <!-- Header con logo -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 py-2 flex justify-center">
+      <img
+        src="logo-pancita.webp"
+        alt="Pancita Llena — Recetas naturales para perros"
+        class="h-16 w-16 sm:h-20 sm:w-20 rounded-xl object-contain"
+        width="1254" height="1254" loading="eager" decoding="async">
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ SECCIÓN 1: HERO ============ -->
+    <section id="inicio" class="bg-gradient-to-b from-health-light/60 via-soft to-white">
+      <div class="max-w-5xl mx-auto px-4 pt-8 pb-12 md:pt-14 md:pb-20 md:grid md:grid-cols-2 md:gap-10 md:items-center">
+
+        <div class="text-center md:text-left">
+          <span class="inline-flex items-center gap-1.5 bg-health/10 text-health-dark text-xs font-extrabold tracking-widest uppercase px-3 py-1.5 rounded-full">
+            <i data-lucide="leaf" class="w-3.5 h-3.5"></i>
+            Método Natural
+          </span>
+          <h1 class="mt-4 text-[2rem] leading-[1.15] sm:text-4xl md:text-5xl font-black">
+            <span class="text-health-dark">200 recetas naturales</span> que le devuelven la salud a tu perro
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-gray-600 font-semibold">
+            Con ingredientes que ya tienes en casa e instrucciones paso a paso que cualquier dueño de mascota puede seguir.
+          </p>
+        </div>
+
+        <!-- Imagen principal: antes y después -->
+        <div class="mt-8 md:mt-0 md:row-span-2">
+          <img
+            src="hero-antes-despues.webp"
+            alt="Antes y después: perro con picazón comiendo croquetas y el mismo perro feliz con comida natural del Kit Pancita Llena"
+            class="w-full max-w-lg mx-auto aspect-square object-cover rounded-2xl shadow-xl"
+            width="1254" height="1254" fetchpriority="high" loading="eager" decoding="async">
+        </div>
+
+        <div class="mt-8 md:mt-6 text-center md:text-left">
+          <a href="#oferta" class="btn-cta animate-pulseSoft inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-lg font-extrabold px-6 py-4 rounded-2xl shadow-cta">
+            Quiero cuidar su salud por solo $7.99 USD
+            <i data-lucide="arrow-right" class="w-5 h-5 shrink-0"></i>
+          </a>
+          <p class="mt-3 flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500 font-semibold">
+            <span class="inline-flex items-center gap-1"><i data-lucide="lock" class="w-3.5 h-3.5 text-health"></i>Compra 100% Segura</span>
+            <span class="text-gray-300">|</span>
+            <span class="inline-flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5 text-health"></i>Acceso Inmediato</span>
+            <span class="text-gray-300">|</span>
+            <span class="inline-flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-health"></i>Garantía de 7 días</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 2: SÍNTOMAS ============ -->
+    <section class="bg-soft py-14 md:py-20">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-center text-2xl sm:text-3xl md:text-4xl font-black">Si tu perro sufre con esto…</h2>
+
+        <ul class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <li class="rounded-2xl overflow-hidden shadow-card bg-white aspect-square">
+            <img src="sintoma-1.webp" alt="Picazón constante" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1024" height="1024">
+          </li>
+          <li class="rounded-2xl overflow-hidden shadow-card bg-white aspect-square">
+            <img src="sintoma-2.webp" alt="Piel descamada" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1024" height="1024">
+          </li>
+          <li class="rounded-2xl overflow-hidden shadow-card bg-white aspect-square">
+            <img src="sintoma-3.webp" alt="Heces blandas o diarrea" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1024" height="1024">
+          </li>
+          <li class="rounded-2xl overflow-hidden shadow-card bg-white aspect-square">
+            <img src="sintoma-4.webp" alt="Vómitos frecuentes" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1024" height="1024">
+          </li>
+          <li class="rounded-2xl overflow-hidden shadow-card bg-white aspect-square">
+            <img src="sintoma-5.webp" alt="Pérdida de pelo" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1024" height="1024">
+          </li>
+          <li class="rounded-2xl overflow-hidden shadow-card bg-white aspect-square">
+            <img src="sintoma-6.webp" alt="Lamiéndose la pata sin parar" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1024" height="1024">
+          </li>
+        </ul>
+
+        <p class="mt-8 text-center text-xl sm:text-2xl font-black">
+          …el problema podría estar en <span class="text-cta">su plato</span>.
+        </p>
+
+        <div class="mt-6 text-center">
+          <a href="#oferta" class="btn-cta inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-lg font-extrabold px-6 py-4 rounded-2xl shadow-cta">
+            Quiero solucionar esto con comida de verdad
+            <i data-lucide="arrow-right" class="w-5 h-5 shrink-0"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 3: LA CAUSA ============ -->
+    <section class="bg-white py-14 md:py-20">
+      <div class="max-w-5xl mx-auto px-4 md:grid md:grid-cols-2 md:gap-12 md:items-center">
+        <div class="rounded-3xl overflow-hidden shadow-card aspect-[4/3] md:aspect-square">
+          <img
+            src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=900&h=900&fit=crop&q=80"
+            alt="Plato de croquetas de alimento balanceado comercial"
+            class="w-full h-full object-cover" loading="lazy" decoding="async" width="900" height="900">
+        </div>
+
+        <div class="mt-8 md:mt-0">
+          <span class="inline-block bg-cta-light text-cta-dark text-xs font-extrabold tracking-widest uppercase px-3 py-1.5 rounded-full">
+            La causa que nadie te cuenta
+          </span>
+          <h2 class="mt-4 text-2xl sm:text-3xl font-black leading-tight">
+            Tu perro come el mismo alimento balanceado todos los días. Y su cuerpo pasa la factura.
+          </h2>
+          <div class="mt-4 space-y-3 text-gray-600 font-semibold">
+            <p>La mayoría de las croquetas y alimentos comerciales son ultraprocesados, llenos de conservantes, colorantes y siempre con los mismos ingredientes. Día tras día, esto sobrecarga su intestino y debilita su inmunidad.</p>
+            <p>Y es en la piel, en el pelo y en sus heces donde su cuerpo muestra que algo no va bien.</p>
+            <p class="text-ink font-extrabold">La buena noticia: cuando su comida cambia, tu perro también cambia.</p>
+          </div>
+
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-start gap-3">
+              <i data-lucide="circle-check" class="w-6 h-6 text-health shrink-0"></i>
+              <span class="font-bold">Comida de verdad, 100% natural y sin conservantes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="circle-check" class="w-6 h-6 text-health shrink-0"></i>
+              <span class="font-bold">Variedad de ingredientes, con las vitaminas que él realmente necesita</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="circle-check" class="w-6 h-6 text-health shrink-0"></i>
+              <span class="font-bold">Recetas simples de seguir, con ingredientes del mercado local</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="circle-check" class="w-6 h-6 text-health shrink-0"></i>
+              <span class="font-bold">200 opciones para que nunca se aburra de su plato</span>
+            </li>
+          </ul>
+
+          <a href="#oferta" class="btn-cta mt-8 inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-lg font-extrabold px-6 py-4 rounded-2xl shadow-cta">
+            Quiero recibir las 200 recetas
+            <i data-lucide="arrow-right" class="w-5 h-5 shrink-0"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 4: MENÚ SEMANAL ============ -->
+    <section class="bg-soft py-14 md:py-20">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="inline-block bg-health/10 text-health-dark text-xs font-extrabold tracking-widest uppercase px-3 py-1.5 rounded-full">
+            Dentro del kit
+          </span>
+          <h2 class="mt-4 text-2xl sm:text-3xl md:text-4xl font-black">Mira lo que va a comer esta semana</h2>
+          <p class="mt-3 text-gray-600 font-semibold">
+            Ingredientes de mercado, paso a paso sencillo y la porción exacta para su tamaño. Comida que nutre de verdad.
+          </p>
+        </div>
+
+        <div class="mt-8 max-w-md mx-auto rounded-3xl overflow-hidden shadow-card aspect-[4/3] ring-4 ring-white">
+          <img
+            src="https://images.unsplash.com/photo-1745252777945-d430ecf54580?w=900&h=675&fit=crop&q=80"
+            alt="Perro comiendo un plato de comida natural cocida con carne, brócoli y zanahoria"
+            class="w-full h-full object-cover" loading="lazy" decoding="async" width="900" height="675">
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-amber-100 text-amber-600 flex flex-col items-center justify-center">
+              <i data-lucide="drumstick" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Lun</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de pollo con camote (batata dulce) y zanahoria</p>
+          </article>
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-rose-100 text-rose-600 flex flex-col items-center justify-center">
+              <i data-lucide="beef" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Mar</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de carne molida con calabaza y arroz</p>
+          </article>
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-orange-100 text-orange-600 flex flex-col items-center justify-center">
+              <i data-lucide="cooking-pot" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Mié</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de paté de pollo con zanahoria</p>
+          </article>
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-red-100 text-red-600 flex flex-col items-center justify-center">
+              <i data-lucide="heart" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Jue</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de corazones de pollo con camote y calabacín</p>
+          </article>
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-sky-100 text-sky-600 flex flex-col items-center justify-center">
+              <i data-lucide="fish" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Vie</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de tilapia con papa y brócoli</p>
+          </article>
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-yellow-100 text-yellow-600 flex flex-col items-center justify-center">
+              <i data-lucide="egg" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Sáb</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de huevo con arroz y calabacín italiano</p>
+          </article>
+          <article class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-card border-2 border-health/20 border-l-[6px] border-l-health transition-transform duration-200 hover:-translate-y-1 sm:col-span-2 lg:col-span-3 lg:max-w-md lg:mx-auto lg:w-full">
+            <div class="shrink-0 w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex flex-col items-center justify-center">
+              <i data-lucide="soup" class="w-7 h-7"></i>
+              <span class="text-[11px] font-black uppercase">Dom</span>
+            </div>
+            <p class="text-lg font-extrabold leading-snug">Receta de albóndigas con puré de camote</p>
+          </article>
+        </div>
+
+        <p class="mt-8 text-center text-lg sm:text-xl font-black">
+          <span class="text-health-dark">+200 recetas caseras fáciles de hacer.</span><br class="sm:hidden">
+          Acceso inmediato + Actualizaciones de por vida.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 5: ENTREGABLES ============ -->
+    <section class="bg-white py-14 md:py-20">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-center text-2xl sm:text-3xl md:text-4xl font-black max-w-2xl mx-auto">
+          Un kit pensado para su salud, desde el primer día
+        </h2>
+
+        <div class="mt-10 md:grid md:grid-cols-2 md:gap-10 md:items-center">
+          <div class="max-w-lg mx-auto">
+            <img
+              src="mockup-kit.webp"
+              alt="Kit Pancita Llena: libro de 200 recetas naturales para perros, plato de comida natural y acceso desde el celular"
+              class="w-full aspect-square object-cover rounded-2xl shadow-card" loading="lazy" decoding="async" width="1254" height="1254">
+          </div>
+
+          <div class="mt-8 md:mt-0 grid gap-4">
+            <div class="flex gap-4 bg-soft rounded-2xl p-5">
+              <span class="shrink-0 w-12 h-12 rounded-xl bg-health text-white flex items-center justify-center"><i data-lucide="book-open" class="w-6 h-6"></i></span>
+              <div>
+                <h3 class="font-black text-lg">200 recetas completas</h3>
+                <p class="mt-1 text-gray-600 font-semibold">Modo de preparación detallado, con la porción ideal para su tamaño e ingredientes altamente nutritivos.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-soft rounded-2xl p-5">
+              <span class="shrink-0 w-12 h-12 rounded-xl bg-health text-white flex items-center justify-center"><i data-lucide="shopping-basket" class="w-6 h-6"></i></span>
+              <div>
+                <h3 class="font-black text-lg">Ingredientes accesibles</h3>
+                <p class="mt-1 text-gray-600 font-semibold">Todo lo que encuentras en cualquier supermercado. Más salud gastando menos.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-soft rounded-2xl p-5">
+              <span class="shrink-0 w-12 h-12 rounded-xl bg-health text-white flex items-center justify-center"><i data-lucide="calendar-heart" class="w-6 h-6"></i></span>
+              <div>
+                <h3 class="font-black text-lg">Recetas para fechas especiales</h3>
+                <p class="mt-1 text-gray-600 font-semibold">Pasteles y platillos para celebrar su cumpleaños y el día de su adopción.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-soft rounded-2xl p-5">
+              <span class="shrink-0 w-12 h-12 rounded-xl bg-health text-white flex items-center justify-center"><i data-lucide="refresh-cw" class="w-6 h-6"></i></span>
+              <div>
+                <h3 class="font-black text-lg">Actualizaciones futuras</h3>
+                <p class="mt-1 text-gray-600 font-semibold">Cualquier nueva receta incluida sin costo extra.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3">
+          <li class="inline-flex items-center gap-1.5 bg-health-light text-health-dark text-sm font-extrabold px-4 py-2 rounded-full border border-health/30"><i data-lucide="utensils" class="w-4 h-4"></i>Comidas del día a día</li>
+          <li class="inline-flex items-center gap-1.5 bg-health-light text-health-dark text-sm font-extrabold px-4 py-2 rounded-full border border-health/30"><i data-lucide="zap" class="w-4 h-4"></i>Recetas rápidas</li>
+          <li class="inline-flex items-center gap-1.5 bg-health-light text-health-dark text-sm font-extrabold px-4 py-2 rounded-full border border-health/30"><i data-lucide="cooking-pot" class="w-4 h-4"></i>Rinde toda la semana</li>
+          <li class="inline-flex items-center gap-1.5 bg-health-light text-health-dark text-sm font-extrabold px-4 py-2 rounded-full border border-health/30"><i data-lucide="carrot" class="w-4 h-4"></i>Snacks saludables</li>
+          <li class="inline-flex items-center gap-1.5 bg-health-light text-health-dark text-sm font-extrabold px-4 py-2 rounded-full border border-health/30"><i data-lucide="cake-slice" class="w-4 h-4"></i>Fechas especiales</li>
+          <li class="inline-flex items-center gap-1.5 bg-health-light text-health-dark text-sm font-extrabold px-4 py-2 rounded-full border border-health/30"><i data-lucide="paw-print" class="w-4 h-4"></i>Perros exigentes</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 6: TESTIMONIOS ============ -->
+    <section class="bg-soft py-14 md:py-20">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-center text-2xl sm:text-3xl md:text-4xl font-black max-w-3xl mx-auto">
+          Dueños de mascotas que ya notaron la diferencia en el plato <span class="text-health-dark">(y en su perro)</span>
+        </h2>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <figure class="bg-white rounded-2xl p-6 shadow-card flex flex-col">
+            <div class="flex gap-0.5 text-sun" aria-label="5 de 5 estrellas">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <blockquote class="mt-4 text-gray-700 font-semibold flex-1">
+              "Yo solo usaba las recetas los domingos. Preparo una olla grande, la divido en recipientes y toda la semana está resuelta. Cambió mi rutina más que la de ellos."
+            </blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=faces&q=80" alt="Foto de Mariana" class="w-12 h-12 rounded-full object-cover ring-2 ring-health-light" loading="lazy" decoding="async" width="120" height="120">
+              <div>
+                <p class="font-black">Mariana</p>
+                <p class="text-sm text-gray-500 font-semibold">Dueña de Mel, Golden Retriever</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="bg-white rounded-2xl p-6 shadow-card flex flex-col">
+            <div class="flex gap-0.5 text-sun" aria-label="5 de 5 estrellas">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <blockquote class="mt-4 text-gray-700 font-semibold flex-1">
+              "La tabla de porciones fue lo que más me ayudó. Yo le daba comida de más y no tenía ni idea."
+            </blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=faces&q=80" alt="Foto de Carlos" class="w-12 h-12 rounded-full object-cover ring-2 ring-health-light" loading="lazy" decoding="async" width="120" height="120">
+              <div>
+                <p class="font-black">Carlos</p>
+                <p class="text-sm text-gray-500 font-semibold">Dueño de Thor, Pinscher</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="bg-white rounded-2xl p-6 shadow-card flex flex-col">
+            <div class="flex gap-0.5 text-sun" aria-label="5 de 5 estrellas">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <blockquote class="mt-4 text-gray-700 font-semibold flex-1">
+              "Mi perro es muy exigente para comer. Las recetas del grupo de 'perros difíciles' fueron las únicas que aceptó desde el primer día."
+            </blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=faces&q=80" alt="Foto de Fernanda" class="w-12 h-12 rounded-full object-cover ring-2 ring-health-light" loading="lazy" decoding="async" width="120" height="120">
+              <div>
+                <p class="font-black">Fernanda</p>
+                <p class="text-sm text-gray-500 font-semibold">Dueña de Max, Mestizo</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 7: BONOS ============ -->
+    <section class="bg-white py-14 md:py-20">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center">
+          <span class="inline-flex items-center gap-1.5 bg-sun/20 text-amber-700 text-xs font-extrabold tracking-widest uppercase px-3 py-1.5 rounded-full">
+            <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+            Regalos exclusivos
+          </span>
+          <h2 class="mt-4 text-2xl sm:text-3xl md:text-4xl font-black max-w-3xl mx-auto">
+            Además de las 200 recetas, te llevas cuatro materiales de regalo
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Bono 1 -->
+          <article class="flex flex-col bg-soft rounded-2xl p-4 sm:p-5 border border-gray-100">
+            <img src="bono-1.webp" alt="Bono 1 - Tabla de Porciones por Peso" class="w-full aspect-square object-cover rounded-xl shadow-md mb-4" loading="lazy" decoding="async" width="1254" height="1254">
+            <div>
+              <span class="inline-block bg-health text-white text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md">Bono 1</span>
+              <h3 class="mt-2 font-black text-lg leading-tight">Tabla de Porciones por Peso (3 a 45 kg)</h3>
+              <p class="mt-1 text-gray-600 font-semibold text-sm">La cantidad exacta para su tamaño.</p>
+              <p class="mt-2 flex flex-wrap items-center gap-2 text-sm font-bold">
+                <span class="text-gray-500">Valor: <span class="line-through">$9.00 USD</span></span>
+                <span class="bg-cta text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md">Hoy gratis</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- Bono 2 -->
+          <article class="flex flex-col bg-soft rounded-2xl p-4 sm:p-5 border border-gray-100">
+            <img src="bono-2.webp" alt="Bono 2 - La Lista Roja" class="w-full aspect-square object-cover rounded-xl shadow-md mb-4" loading="lazy" decoding="async" width="1254" height="1254">
+            <div>
+              <span class="inline-block bg-health text-white text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md">Bono 2</span>
+              <h3 class="mt-2 font-black text-lg leading-tight">La Lista Roja: 27 alimentos prohibidos</h3>
+              <p class="mt-1 text-gray-600 font-semibold text-sm">Los ingredientes que pueden hacerle daño y nunca deben ir en su plato.</p>
+              <p class="mt-2 flex flex-wrap items-center gap-2 text-sm font-bold">
+                <span class="text-gray-500">Valor: <span class="line-through">$7.00 USD</span></span>
+                <span class="bg-cta text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md">Hoy gratis</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- Bono 3 -->
+          <article class="flex flex-col bg-soft rounded-2xl p-4 sm:p-5 border border-gray-100">
+            <img src="bono-3.webp" alt="Bono 3 - Planner de Domingo" class="w-full aspect-square object-cover rounded-xl shadow-md mb-4" loading="lazy" decoding="async" width="1254" height="1254">
+            <div>
+              <span class="inline-block bg-health text-white text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md">Bono 3</span>
+              <h3 class="mt-2 font-black text-lg leading-tight">Planner de Domingo</h3>
+              <p class="mt-1 text-gray-600 font-semibold text-sm">Organiza la alimentación de tu perro en pocos minutos.</p>
+              <p class="mt-2 flex flex-wrap items-center gap-2 text-sm font-bold">
+                <span class="text-gray-500">Valor: <span class="line-through">$6.00 USD</span></span>
+                <span class="bg-cta text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md">Hoy gratis</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- Bono 4 -->
+          <article class="flex flex-col bg-soft rounded-2xl p-4 sm:p-5 border border-gray-100">
+            <img src="bono-4.webp" alt="Bono 4 - 12 Recetas de Celebración" class="w-full aspect-square object-cover rounded-xl shadow-md mb-4" loading="lazy" decoding="async" width="1254" height="1254">
+            <div>
+              <span class="inline-block bg-health text-white text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md">Bono 4</span>
+              <h3 class="mt-2 font-black text-lg leading-tight">12 Recetas de Celebración</h3>
+              <p class="mt-1 text-gray-600 font-semibold text-sm">Pasteles y platillos para fechas especiales y Navidad.</p>
+              <p class="mt-2 flex flex-wrap items-center gap-2 text-sm font-bold">
+                <span class="text-gray-500">Valor: <span class="line-through">$6.00 USD</span></span>
+                <span class="bg-cta text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md">Hoy gratis</span>
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="#oferta" class="btn-cta inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-lg font-extrabold px-6 py-4 rounded-2xl shadow-cta">
+            Quiero el kit con los 4 bonos
+            <i data-lucide="arrow-right" class="w-5 h-5 shrink-0"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 8: OFERTA ============ -->
+    <section id="oferta" class="bg-gradient-to-b from-health-light/70 to-soft py-14 md:py-20 scroll-mt-4">
+      <div class="max-w-lg mx-auto px-4">
+        <div class="bg-white rounded-3xl shadow-card overflow-hidden border-2 border-health">
+
+          <!-- Caja de urgencia -->
+          <div class="bg-ink text-white px-5 py-4 text-center">
+            <p class="text-sm font-bold flex items-center justify-center gap-2">
+              <i data-lucide="timer" class="w-4 h-4 text-sun"></i>
+              Oferta reservada por
+            </p>
+            <div class="mt-2 flex items-center justify-center gap-2" role="timer" aria-live="off">
+              <div class="bg-white/10 rounded-xl px-4 py-2 min-w-[4.5rem]">
+                <span id="timer-min" class="block text-3xl font-black tabular-nums text-sun">12</span>
+                <span class="block text-[10px] font-bold uppercase tracking-widest text-gray-300">Minutos</span>
+              </div>
+              <span class="text-3xl font-black text-sun">:</span>
+              <div class="bg-white/10 rounded-xl px-4 py-2 min-w-[4.5rem]">
+                <span id="timer-sec" class="block text-3xl font-black tabular-nums text-sun">00</span>
+                <span class="block text-[10px] font-bold uppercase tracking-widest text-gray-300">Segundos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8">
+            <!-- Mockup del kit -->
+            <img
+              src="mockup-kit.webp"
+              alt="Kit Pancita Llena completo"
+              class="w-full aspect-square object-cover rounded-2xl" loading="lazy" decoding="async" width="1254" height="1254">
+
+            <h2 class="mt-6 text-center text-3xl font-black">Kit Pancita Llena</h2>
+
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-start gap-3"><i data-lucide="book-open" class="w-5 h-5 text-health shrink-0 mt-0.5"></i><span class="font-bold">Libro Digital Pancita Llena — 200 recetas completas <span class="block text-sm font-semibold text-gray-500">(Formato PDF optimizado para celular e impresión)</span></span></li>
+              <li class="flex items-start gap-3"><i data-lucide="circle-check" class="w-5 h-5 text-health shrink-0 mt-0.5"></i><span class="font-bold">Modo de preparación paso a paso, con la porción ideal para su tamaño</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="circle-check" class="w-5 h-5 text-health shrink-0 mt-0.5"></i><span class="font-bold">Recetas para fechas especiales</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="gift" class="w-5 h-5 text-cta shrink-0 mt-0.5"></i><span class="font-bold">Bono 1: Tabla de Porciones por Peso (3 a 45 kg)</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="gift" class="w-5 h-5 text-cta shrink-0 mt-0.5"></i><span class="font-bold">Bono 2: La Lista Roja: 27 alimentos prohibidos</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="gift" class="w-5 h-5 text-cta shrink-0 mt-0.5"></i><span class="font-bold">Bono 3: Planner de Domingo</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="gift" class="w-5 h-5 text-cta shrink-0 mt-0.5"></i><span class="font-bold">Bono 4: 12 Recetas de Celebración</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="refresh-cw" class="w-5 h-5 text-health shrink-0 mt-0.5"></i><span class="font-bold">Actualizaciones de por vida, sin costo extra</span></li>
+            </ul>
+
+            <!-- Precios -->
+            <div class="mt-8 text-center">
+              <p class="text-gray-500 font-bold">Valor total: <span class="line-through">$47.99 USD</span></p>
+              <p class="mt-2 inline-flex flex-wrap items-center justify-center gap-x-2 bg-red-500 text-white text-sm font-black uppercase tracking-wide px-3 py-1 rounded-full">
+                83% de descuento <span class="opacity-80">·</span> <span class="normal-case">Ahorras $40.00 USD</span>
+              </p>
+              <p class="mt-1 text-sm font-extrabold uppercase tracking-widest text-health-dark">Hoy</p>
+              <p class="text-6xl font-black text-ink leading-none mt-1">$7.99<span class="text-xl font-extrabold text-gray-500"> USD</span></p>
+              <p class="mt-2 inline-block bg-health-light text-health-dark text-sm font-extrabold px-3 py-1 rounded-full">Pago único</p>
+            </div>
+
+            <a id="btn-checkout" href="#oferta" class="btn-cta animate-pulseSoft mt-8 flex w-full items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-xl font-black px-6 py-5 rounded-2xl shadow-cta">
+              <i data-lucide="shopping-basket" class="w-6 h-6 shrink-0"></i>
+              ¡Sí! Quiero cuidar su salud ahora
+            </a>
+
+            <!-- Sellos de confianza -->
+            <div class="mt-6 grid grid-cols-2 gap-2 text-xs font-extrabold text-gray-600">
+              <div class="flex items-center justify-center gap-1.5 bg-soft rounded-xl py-2.5 px-2 border border-gray-100">
+                <i data-lucide="wallet" class="w-4 h-4 text-sky-500"></i>Mercado Pago
+              </div>
+              <div class="flex items-center justify-center gap-1.5 bg-soft rounded-xl py-2.5 px-2 border border-gray-100">
+                <i data-lucide="flame" class="w-4 h-4 text-cta"></i>Hotmart
+              </div>
+              <div class="flex items-center justify-center gap-1.5 bg-soft rounded-xl py-2.5 px-2 border border-gray-100">
+                <i data-lucide="lock" class="w-4 h-4 text-health"></i>Compra 100% Segura
+              </div>
+              <div class="flex items-center justify-center gap-1.5 bg-soft rounded-xl py-2.5 px-2 border border-gray-100">
+                <i data-lucide="shield-check" class="w-4 h-4 text-health"></i>Garantía de 7 días
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garantía -->
+        <div class="mt-6 bg-white rounded-3xl p-6 sm:p-8 shadow-card border-2 border-dashed border-health text-center">
+          <span class="mx-auto w-16 h-16 rounded-full bg-health text-white flex items-center justify-center shadow-card"><i data-lucide="shield-check" class="w-8 h-8"></i></span>
+          <h3 class="mt-4 text-2xl font-black">Garantía de 7 días</h3>
+          <p class="mt-2 text-base text-gray-600 font-semibold leading-relaxed">
+            Conoce todo el contenido con total tranquilidad. Si no cumple con tus expectativas, solicita el reembolso dentro de 7 días.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 9: FAQ ============ -->
+    <section class="bg-white py-14 md:py-20">
+      <div class="max-w-2xl mx-auto px-4">
+        <h2 class="text-center text-2xl sm:text-3xl md:text-4xl font-black">Preguntas Frecuentes</h2>
+
+        <div id="faq" class="mt-8 space-y-3">
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+              ¿Las recetas ayudan con la picazón, caída de pelo e intestino?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">La alimentación es la base de la salud de tu perro. Las recetas cambian los alimentos ultraprocesados por comida de verdad, con ingredientes variados y vitaminas que cuidan su piel, pelaje e intestino.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+              ¿En cuánto tiempo veré la diferencia?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">Cada perro tiene su propio ritmo. La piel y el pelo se renuevan poco a poco, por lo que la constancia es clave. Muchos dueños comienzan notando un plato completamente limpio y heces más firmes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+              ¿Cómo hago el cambio de las croquetas a la comida natural?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">De forma gradual. Comienza mezclando una pequeña porción de comida natural con sus croquetas habituales y ve aumentando la cantidad durante algunos días, hasta retirar el alimento comercial por completo. Así su intestino se adaptará perfectamente.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+              ¿Es un libro físico?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">No. Todo el Kit Pancita Llena es 100% digital (guías y recetarios en formato PDF interactivo de alta resolución, optimizados para ver fácilmente desde tu celular, tablet, computadora o para imprimir en casa). El acceso llega a tu correo inmediatamente después de la compra.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+              ¿Sale más caro que comprar croquetas?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-5" role="region" aria-labelledby="faq-btn-5">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">No tiene por qué serlo. Las recetas utilizan ingredientes simples de supermercado y muchas de ellas rinden para toda la semana.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-6" id="faq-btn-6">
+              ¿Cómo recibo las recetas?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-6" role="region" aria-labelledby="faq-btn-6">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">Inmediatamente después de la confirmación del pago, recibirás el acceso a todo el material en formato digital directamente en tu correo electrónico.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-7" id="faq-btn-7">
+              ¿Puedo acceder desde el celular?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-7" role="region" aria-labelledby="faq-btn-7">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">Sí. Puedes leer todo el material en tu celular, tablet, computadora o incluso imprimir las recetas que prefieras.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-8" id="faq-btn-8">
+              ¿Las recetas sirven para cualquier raza?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-8" role="region" aria-labelledby="faq-btn-8">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">Sí. Cada receta incluye la porción recomendada según el rango de peso, desde perros pequeños de 3 kg hasta perros grandes de 45 kg.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-soft rounded-2xl border border-gray-100">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left p-5 font-extrabold" aria-expanded="false" aria-controls="faq-9" id="faq-btn-9">
+              ¿Por cuánto tiempo tendré acceso?
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-health"></i>
+            </button>
+            <div class="faq-panel" id="faq-9" role="region" aria-labelledby="faq-btn-9">
+              <p class="px-5 pb-5 text-gray-600 font-semibold">Para siempre. El pago es único y todas las actualizaciones futuras ya están incluidas sin costo adicional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 10: ÚLTIMA LLAMADA ============ -->
+    <section class="relative overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=1400&h=1000&fit=crop&q=80"
+        alt="Perro feliz mirando a su dueño"
+        class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" width="1400" height="1000">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/50"></div>
+
+      <div class="relative max-w-2xl mx-auto px-4 py-20 md:py-28 text-center text-white">
+        <h2 class="text-3xl sm:text-4xl font-black leading-tight">
+          Él no puede decirte lo que siente. <span class="text-sun">Pero su cuerpo lo demuestra.</span>
+        </h2>
+        <p class="mt-5 text-base sm:text-lg font-semibold text-gray-200">
+          Comienza hoy a darle comida de verdad a tu mejor amigo y nota la diferencia en su piel, su pelo y su alegría. Aprovecha los bonos exclusivos del Kit Pancita Llena.
+        </p>
+        <a href="#oferta" class="btn-cta mt-8 inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-lg font-extrabold px-6 py-4 rounded-2xl shadow-cta">
+          Quiero el kit completo por $7.99 USD
+          <i data-lucide="arrow-right" class="w-5 h-5 shrink-0"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-gray-300 text-center text-xs sm:text-sm font-semibold px-4 pt-8 pb-28">
+    <img
+      src="logo-pancita.webp"
+      alt="Pancita Llena"
+      class="mx-auto h-16 w-16 rounded-xl object-contain" loading="lazy" decoding="async" width="1254" height="1254">
+    <p class="mt-4">© 2026 Pancita Llena — Kit de Alimentación Natural para Perros. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Barra fija inferior -->
+  <div id="sticky-cta" class="is-hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 shadow-[0_-8px_20px_-10px_rgba(31,41,55,.25)]">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <p class="min-w-0 leading-tight">
+        <span class="block text-sm sm:text-base font-black truncate">Pancita Llena</span>
+        <span class="block text-sm sm:text-base font-extrabold text-health-dark">$7.99 USD</span>
+      </p>
+      <a href="#oferta" class="btn-cta shrink-0 inline-flex items-center justify-center gap-1.5 bg-cta hover:bg-cta-dark text-white text-sm sm:text-base font-black tracking-wide px-5 sm:px-8 py-3 rounded-xl shadow-cta">
+        QUIERO AHORA
+        <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      // Enlace de pago (Hotmart). Los parámetros UTM de la visita se pasan al checkout.
+      var CHECKOUT_URL = '';
+
+      /* ---------- Íconos ---------- */
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      /* ---------- Checkout ---------- */
+      var checkoutBtn = document.getElementById('btn-checkout');
+      if (checkoutBtn && CHECKOUT_URL) {
+        var url = new URL(CHECKOUT_URL);
+        new URLSearchParams(window.location.search).forEach(function (value, key) {
+          if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+        });
+        checkoutBtn.href = url.toString();
+      }
+
+      /* ---------- Cronómetro regresivo persistente (12:00) ---------- */
+      var DURATION_MS = 12 * 60 * 1000;
+      var STORAGE_KEY = 'pancitaLlena.deadline';
+      var minEl = document.getElementById('timer-min');
+      var secEl = document.getElementById('timer-sec');
+
+      function readDeadline() {
+        try {
+          var saved = parseInt(window.localStorage.getItem(STORAGE_KEY), 10);
+          return isNaN(saved) ? null : saved;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function saveDeadline(value) {
+        try {
+          window.localStorage.setItem(STORAGE_KEY, String(value));
+        } catch (e) { /* almacenamiento no disponible: el cronómetro sigue en memoria */ }
+      }
+
+      function newDeadline() {
+        var value = Date.now() + DURATION_MS;
+        saveDeadline(value);
+        return value;
+      }
+
+      var deadline = readDeadline();
+      if (!deadline || deadline - Date.now() > DURATION_MS || deadline <= Date.now()) {
+        deadline = newDeadline();
+      }
+
+      function pad(n) {
+        return n < 10 ? '0' + n : String(n);
+      }
+
+      function tick() {
+        var remaining = deadline - Date.now();
+        if (remaining <= 0) {
+          deadline = newDeadline();
+          remaining = DURATION_MS;
+        }
+        var totalSeconds = Math.ceil(remaining / 1000);
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+        minEl.textContent = pad(minutes);
+        secEl.textContent = pad(seconds);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+
+      /* ---------- FAQ acordeón ---------- */
+      var items = document.querySelectorAll('.faq-item');
+
+      function closeItem(item) {
+        var panel = item.querySelector('.faq-panel');
+        item.classList.remove('is-open');
+        item.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        panel.style.maxHeight = '0px';
+      }
+
+      function openItem(item) {
+        var panel = item.querySelector('.faq-panel');
+        item.classList.add('is-open');
+        item.querySelector('.faq-trigger').setAttribute('aria-expanded', 'true');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+
+      items.forEach(function (item) {
+        item.querySelector('.faq-trigger').addEventListener('click', function () {
+          var isOpen = item.classList.contains('is-open');
+          items.forEach(closeItem);
+          if (!isOpen) openItem(item);
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        document.querySelectorAll('.faq-item.is-open .faq-panel').forEach(function (panel) {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        });
+      });
+
+      /* ---------- Barra fija inferior: aparece al pasar el hero ---------- */
+      var sticky = document.getElementById('sticky-cta');
+      var hero = document.getElementById('inicio');
+
+      if (sticky && hero) {
+        var updateSticky = function () {
+          sticky.classList.toggle('is-hidden', hero.getBoundingClientRect().bottom > 0);
+        };
+        window.addEventListener('scroll', updateSticky, { passive: true });
+        updateSticky();
+      }
+    })();
+  </script>
+</body>
+</html>
