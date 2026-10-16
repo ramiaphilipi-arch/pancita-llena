@@ -1,0 +1,3 @@
+entregables-pdf/
+# PDFs pagos (order bumps): nunca subir ao GitHub, o repositório é público
+*.pdf
