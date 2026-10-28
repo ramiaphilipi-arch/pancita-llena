@@ -94,10 +94,10 @@
 <body class="bg-white font-sans text-ink overflow-x-hidden">
 
   <!-- Barra superior -->
-  <div class="bg-health-dark text-white text-center text-xs sm:text-sm font-bold py-2 px-4">
+  <div class="bg-red-600 text-white text-center text-xs sm:text-sm font-extrabold uppercase tracking-wide py-2.5 px-4">
     <span class="inline-flex items-center gap-1.5">
-      <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
-      Oferta especial: de $47.99 por $7.99 USD + 4 bonos de regalo
+      <i data-lucide="alarm-clock" class="w-4 h-4 shrink-0"></i>
+      Oferta exclusiva: compra hoy y llévate 4&nbsp;bonos de regalo
     </span>
   </div>
 
@@ -141,6 +141,11 @@
         </div>
 
         <div class="mt-8 md:mt-6 text-center md:text-left">
+          <p class="mb-3 flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1 font-extrabold">
+            <span class="text-gray-500 text-base">De <span class="line-through">$47.99</span></span>
+            <span class="text-ink text-xl">por solo <span class="text-health-dark">$7.99 USD</span></span>
+            <span class="bg-red-500 text-white text-xs font-black uppercase tracking-wide px-2.5 py-1 rounded-full">83% OFF</span>
+          </p>
           <a href="https://pay.hotmart.com/H108062181R?checkoutMode=10" class="btn-cta ic-pancita animate-pulseSoft inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-white text-lg font-extrabold px-6 py-4 rounded-2xl shadow-cta">
             Quiero cuidar su salud por solo $7.99 USD
             <i data-lucide="arrow-right" class="w-5 h-5 shrink-0"></i>
@@ -149,7 +154,7 @@
             <span class="inline-flex items-center gap-1"><i data-lucide="lock" class="w-3.5 h-3.5 text-health"></i>Compra 100% Segura</span>
             <span class="text-gray-300">|</span>
             <span class="inline-flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5 text-health"></i>Acceso Inmediato</span>
-            <span class="text-gray-300">|</span>
+            <span class="text-gray-300 hidden sm:inline">|</span>
             <span class="inline-flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-health"></i>Garantía de 7 días</span>
           </p>
         </div>
